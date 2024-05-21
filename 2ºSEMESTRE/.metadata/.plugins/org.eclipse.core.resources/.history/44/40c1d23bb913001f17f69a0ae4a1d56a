@@ -1,0 +1,60 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class matrizes {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		int n,m,numeroRequisitado;
+		System.out.print("Digite um numero para M(linha): ");
+		n = sc.nextInt();
+		sc.nextLine();
+		System.out.print("Digite um numero para N(colunas): ");
+		m = sc.nextInt();
+		sc.nextLine();
+
+		int[][] matriz = new int[m][n];
+		for(int i = 0;i<m;i++) {
+			for(int j = 0;j<n;j++) {
+				matriz[i][j] = sc.nextInt();	
+			}
+		}
+		System.out.print("Digite um numero para encontrar: ");
+		numeroRequisitado = sc.nextInt();
+		sc.nextLine();
+
+		
+		for(int i = 0;i<m;i++) {
+			for(int j = 0;j<n;j++) {
+				if(numeroRequisitado == matriz[i][j]) {
+					System.out.println("Posicao: " +i+","+j);				
+				}
+//				if(i==0) {
+//					matriz[i] = matriz[i-1];
+//					System.out.print("esquerda: " + matriz[i]);
+//					matriz[i] = matriz[i+1];
+//					System.out.println("direita: " +matriz[i]);
+//				}
+//				if(i==1) {
+//					System.out.println("baixo: " +matriz[i+j]);
+//				}
+//				if(i==2) {
+//					System.out.println("cima: " +matriz[i+j]);
+//				}
+			}
+		}
+//		
+		
+		
+		sc.close();
+	}
+//	public static int verifica(int index,int numero) {
+//		if(index == numero) {
+//			
+//		}
+//		return ;
+//		
+//	}
+
+}

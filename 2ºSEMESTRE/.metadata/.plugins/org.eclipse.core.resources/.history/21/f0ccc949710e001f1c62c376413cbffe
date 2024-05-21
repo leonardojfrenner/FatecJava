@@ -1,0 +1,29 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class exercicio5 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Quantos numeros voce vai digitar? ");
+		int numero=0;
+		int n = sc.nextInt();
+		sc.nextLine();
+		
+		double[] vet = new double[n];
+		
+		for(int i = 0;i<vet.length;i++) {
+			System.out.println("Digite um valor: ");
+			vet[i] = sc.nextDouble();
+		}
+		for(int i = 0;i<vet.length;i++) {
+			if(vet[i]>numero) {
+				numero = (int)vet[i];
+			}
+		}
+		System.out.println("Maior numero: "+ numero +"\nIndice do array "]);
+		
+	}
+
+}

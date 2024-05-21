@@ -1,0 +1,3 @@
+if(j < matriz[i].length) {
+				System.out.println("cima: " +matriz[i+j]);
+				}

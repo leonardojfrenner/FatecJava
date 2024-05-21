@@ -1,0 +1,47 @@
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Pensionista;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Quantas pessoas vao alugar? ");
+		int n = sc.nextInt();
+		sc.nextLine();
+		int quarto=0,
+			aux=0;
+		int[] quartos = new int[10];
+		Pensionista[] p = new Pensionista[n];
+		
+		for(int i = 0;i<p.length;i++) {
+			
+			System.out.printf("ALUGUEL %d#: \n", i+1);
+			System.out.print("Nome: ");
+			String nome = sc.nextLine();
+			System.out.print("Email:"); 
+			String email = sc.nextLine();
+			p[i] = new Pensionista(nome,email);
+			
+			System.out.print("Quarto: ");
+			quarto = sc.nextInt();
+			sc.nextLine();
+			
+			aux = quarto;
+			quartos[aux]= quarto; 	
+			
+		}
+		
+		System.out.println("Quartos alugados: ");
+		for(int i = 0;i<p.length;i++) {
+			System.out.printf("%d : %s \n",quartos[aux],p[i]);
+		}
+		
+		
+		sc.close();
+	}
+
+}

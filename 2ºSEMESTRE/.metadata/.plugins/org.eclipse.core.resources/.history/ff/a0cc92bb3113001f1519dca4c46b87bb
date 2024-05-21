@@ -1,0 +1,21 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class matrizes {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		int n,m;
+		System.out.print("Digite um numero para M: ");
+		n = sc.nextInt();
+		System.out.print("Digite um numero para N: ");
+		m = sc.nextInt();
+		int[][] matriz = new int[m][n];
+		
+		
+		
+		sc.close();
+	}
+
+}

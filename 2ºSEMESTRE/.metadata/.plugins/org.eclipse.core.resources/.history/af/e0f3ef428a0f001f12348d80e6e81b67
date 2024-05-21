@@ -1,0 +1,46 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class exercicio11 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		double menorAltura=0,maiorAltura=0,aux;
+		
+		
+		System.out.println("Quantas pessoas serao digitadas? ");
+		int n = sc.nextInt();
+		sc.nextLine();
+		double[] altura = new double[n];
+		char[] genero= new char[n];
+		
+		
+		for(int i = 0;i<altura.length;i++) {
+			System.out.print("Altura da "+(i+1)+"ªpessoa: " );
+			altura[i]=sc.nextDouble();
+			sc.nextLine();
+			System.out.print("Genero da da "+(i+1)+"ªpessoa: ");
+			genero[i] = sc.next().charAt(0);
+			
+			
+		}	
+		aux = altura[0];
+		System.out.println("Menor Altura ");
+		
+		for(int i = 0;i<altura.length;i++) {
+			if(altura[i]<aux) {
+				menorAltura = altura[i];
+				System.out.println(menorAltura);
+			}
+			if(altura[i]>aux) {
+				maiorAltura = altura[i];
+				System.out.println(maiorAltura);
+			}
+		}
+		
+		
+		sc.close();
+	}
+
+}

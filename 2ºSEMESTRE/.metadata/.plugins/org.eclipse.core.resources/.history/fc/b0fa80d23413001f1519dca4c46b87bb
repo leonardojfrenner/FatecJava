@@ -1,0 +1,40 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class matrizes {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		int n,m,numeroRequisitado;
+		System.out.print("Digite um numero para M: ");
+		n = sc.nextInt();
+		System.out.print("Digite um numero para N: ");
+		m = sc.nextInt();
+		int[][] matriz = new int[m][n];
+		for(int i = 0;i<m;i++) {
+			for(int j = 0;j<n;j++) {
+				matriz[i][j] = sc.nextInt();	
+			}
+		}
+		System.out.print("Digite um numero para encontrar: ");
+		numeroRequisitado = sc.nextInt();
+		
+		for(int i = 0;i<m;i++) {
+			for(int j = 0;j<n;j++) {
+				if(numeroRequisitado == matriz[i][j]) {
+					System.out.println("Posicao: " +i+","+j);
+					System.out.println("Left: " +matriz[i-1]);
+					System.out.println("right: " +matriz[i+1]);
+					System.out.println("down: " +matriz[i+3]);
+					System.out.println("up: " +matriz[i-3]);
+				}
+			}
+		}
+		
+		
+		
+		sc.close();
+	}
+
+}

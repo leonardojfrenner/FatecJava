@@ -1,0 +1,61 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class exercicio11 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		double menorAltura=0,maiorAltura=0;
+		double mediaAltura,somaAltura=0.0;
+		int quantidadeMulheres=0,quantidadeHomens=0;
+		
+		
+		System.out.println("Quantas pessoas serao digitadas? ");
+		int n = sc.nextInt();
+		sc.nextLine();
+		double[] altura = new double[n];
+		char[] genero= new char[n];
+		
+		
+		for(int i = 0;i<altura.length;i++) {
+			System.out.print("Altura da "+(i+1)+"ªpessoa: " );
+			altura[i]=sc.nextDouble();
+			sc.nextLine();
+			System.out.print("Genero da da "+(i+1)+"ªpessoa: ");
+			genero[i] = sc.next().charAt(0);
+			
+			
+		}	
+		
+		menorAltura=altura[0];
+		maiorAltura=altura[0];
+		
+		for(int i = 0;i<altura.length;i++) {
+			if(altura[i]<menorAltura) {
+				menorAltura = altura[i];
+			}
+			if(altura[i]>maiorAltura) {
+				maiorAltura = altura[i];		
+			}
+			if(genero[i] == 'f' || genero[i] == 'F') {
+				somaAltura += altura[i];
+				quantidadeMulheres++;
+			}
+			if(genero[i] == 'm' || genero[i] == 'M') {
+				quantidadeHomens++;
+			}
+			
+		}
+		mediaAltura = somaAltura/quantidadeMulheres;
+		
+		System.out.println("Menor ALtura: " + menorAltura);
+		System.out.println("Maior Altura: " + maiorAltura);
+		
+		System.out.printf( "\nMedia das alturas das mulheres: %.2f " , mediaAltura);
+		System.out.println("Numero de homens:" + quantidadeHomens);
+		
+		sc.close();
+	}
+
+}
